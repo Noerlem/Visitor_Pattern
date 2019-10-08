@@ -6,7 +6,12 @@ namespace Visitor_Pattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Bike bike = new Bike();
+            MaintenancePerformer mp = new MaintenancePerformer();
+
+            mp.visit(bike);
+
+            Console.Read();
         }
     }
 }
