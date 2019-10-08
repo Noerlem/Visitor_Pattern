@@ -8,12 +8,12 @@ namespace Visitor_Pattern
         {
             if (bk._isRusty)
             {
-                Console.WriteLine("Bike derusted");
+                Console.WriteLine("Bike derusted\n");
                 bk._isRusty = false;
             }
             else
             {
-                Console.WriteLine($"Nothing is wrong with {bk.ToString()}");
+                Console.WriteLine($"Nothing is wrong with bike\n");
             }
         }
 
@@ -21,12 +21,12 @@ namespace Visitor_Pattern
         {
             if (fw._tireFlat)
             {
-                Console.WriteLine("Tire fixed and pumped");
+                Console.WriteLine("Tire fixed and pumped\n");
                 fw._tireFlat = false;
             }
             else
             {
-                Console.WriteLine($"Nothing is wrong with {fw.ToString()}");
+                Console.WriteLine($"Nothing is wrong with front wheel\n");
             }
         }
 
@@ -34,12 +34,12 @@ namespace Visitor_Pattern
         {
             if (rw._tireFlat)
             {
-                Console.WriteLine("Tire fixed and pumped");
+                Console.WriteLine("Tire fixed and pumped\n");
                 rw._tireFlat = false;
             }
             else
             {
-                Console.WriteLine($"Nothing is wrong with {rw.ToString()}");
+                Console.WriteLine($"Nothing is wrong with rear wheel\n");
             }
         }
 
@@ -47,12 +47,12 @@ namespace Visitor_Pattern
         {
             if (!brk._isAdjusted)
             {
-                Console.WriteLine("Brakes fixed");
+                Console.WriteLine("Brakes fixed\n");
                 brk._isAdjusted = true;
             }
             else
             {
-                Console.WriteLine($"Nothing is wrong with {brk.ToString()}");
+                Console.WriteLine($"Nothing is wrong with brakes\n");
             }
         }
 
@@ -60,12 +60,12 @@ namespace Visitor_Pattern
         {
             if (!bl._soundsAnnoying)
             {
-                Console.WriteLine("Bell is fixed and annoying");
+                Console.WriteLine("Bell is fixed and annoying\n");
                 bl._soundsAnnoying = true;
             }
             else
             {
-                Console.WriteLine($"Nothing is wrong with {bl.ToString()}");
+                Console.WriteLine($"Nothing is wrong with bell\n");
             }
         }
     }

@@ -6,12 +6,15 @@ namespace Visitor_Pattern
     {
         static void Main(string[] args)
         {
-            Bike bike = new Bike();
+            FrontWheel fw = new FrontWheel();
+            RearWheel rw = new RearWheel();
+            Brakes brk = new Brakes();
+            Bell bl = new Bell();
+            Bike bike = new Bike(fw, rw, brk, bl);
+
             MaintenancePerformer mp = new MaintenancePerformer();
 
-            mp.visit(bike);
-
-            Console.Read();
+            bike.accept(mp);
         }
     }
 }

@@ -1,8 +1,17 @@
-﻿namespace Visitor_Pattern
+﻿using System;
+using System.Collections.Generic;
+
+namespace Visitor_Pattern
 {
     public class Bike : IElement
     {
-        IElement[] parts = {new FrontWheel(), new RearWheel(), new Brakes(), new Bell()};
+        public Bike(FrontWheel fw, RearWheel rw, Brakes brk, Bell bl)
+        {
+            parts.Add(fw);
+            parts.Add(rw);
+            parts.Add(brk);
+            parts.Add(bl);
+        }
 
         public void accept(IVisitor visitor)
         {
@@ -10,8 +19,10 @@
             {
                 part.accept(visitor);
             }
+            visitor.visit(this);
         }
 
+        private List<IElement> parts = new List<IElement>();
         public bool _isRusty { get; set; } = true;
     }
     public class FrontWheel : IElement
