@@ -15,7 +15,11 @@ namespace Visitor_Pattern
 
             MaintenancePerformer mp = new MaintenancePerformer();
 
+            Console.WriteLine("Is front tire flat?: {0}\n", fw._tireFlat);
+
             bike.accept(mp);
+
+            Console.WriteLine("Is front tire flat?: {0}", fw._tireFlat);
         }
     }
 }

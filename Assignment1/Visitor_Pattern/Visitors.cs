@@ -21,7 +21,7 @@ namespace Visitor_Pattern
         {
             if (fw._tireFlat)
             {
-                Console.WriteLine("Tire fixed and pumped\n");
+                Console.WriteLine("Front tire fixed and pumped\n");
                 fw._tireFlat = false;
             }
             else
@@ -34,7 +34,7 @@ namespace Visitor_Pattern
         {
             if (rw._tireFlat)
             {
-                Console.WriteLine("Tire fixed and pumped\n");
+                Console.WriteLine("Rear tire fixed and pumped\n");
                 rw._tireFlat = false;
             }
             else
